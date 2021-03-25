@@ -1,0 +1,227 @@
+startup file loaded
+               _
+   _       _ _(_)_     |  Documentation: https://docs.julialang.org
+  (_)     | (_) (_)    |
+   _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
+  | | | | | | |/ _` |  |
+  | | |_| | | | (_| |  |  Version 1.5.2 (2020-09-23)
+ _/ |\__'_|_|_|\__'_|  |  Official https://julialang.org/ release
+|__/                   |
+
+[?2004h[0K[32m[1mjulia> [0m[0m[7C[7Cincl[0K[32m[1mjulia> [0m[0m[7Cinclude[14C("asn[0K[32m[1mjulia> [0m[0m[7Cinclude("asn_[20C[0B
+asn_activeSet.jld2[28Casn_data.jld2
+asn_active_set_detection.jl[28Casn_example.jld2
+asn_attribute_ranking.jl[28Casn_validation.jl
+asn_bw_detection.jl[28Casn_validation.txt
+[0K[32m[1mjulia> [0m[0m[7Cinclude("asn_[20Cv[0K[32m[1mjulia> [0m[0m[7Cinclude("asn_validation.[31Cjl[0K[32m[1mjulia> [0m[0m[7Cinclude("asn_validation.jl"[34C)[0K[32m[1mjulia> [0m[0m[7Cinclude("asn_validation.jl")[35C
+[?2004l[0m==== Approximation Parameters ====
+|X_train| = 1202
+|X_test| = 300
+lambda = 100.0
+==== CV Set 1 ====
+rel. error: 0.017103041833255367
+==== CV Set 2 ====
+rel. error: 0.016076392124711365
+==== CV Set 3 ====
+rel. error: 0.01553191819837231
+==== CV Set 4 ====
+rel. error: 0.015867083355009817
+==== CV Set 5 ====
+rel. error: 0.016851119934134857
+==== CV Set 6 ====
+rel. error: 0.015518702722978351
+==== CV Set 7 ====
+rel. error: 0.017394134078619023
+==== CV Set 8 ====
+rel. error: 0.01684860279637214
+==== CV Set 9 ====
+rel. error: 0.016274849186102905
+==== CV Set 10 ====
+rel. error: 0.015933998162818833
+==== CV Set 11 ====
+rel. error: 0.015450518845787081
+==== CV Set 12 ====
+rel. error: 0.018010604537606823
+==== CV Set 13 ====
+rel. error: 0.017531559813826238
+==== CV Set 14 ====
+rel. error: 0.01521230243927501
+==== CV Set 15 ====
+rel. error: 0.017066848550796477
+==== CV Set 16 ====
+rel. error: 0.015630257114852542
+==== CV Set 17 ====
+rel. error: 0.016079892416758466
+==== CV Set 18 ====
+rel. error: 0.015414611076536303
+==== CV Set 19 ====
+rel. error: 0.017334373751038464
+==== CV Set 20 ====
+rel. error: 0.014811531706642402
+==== CV Set 21 ====
+rel. error: 0.014641765514501616
+==== CV Set 22 ====
+rel. error: 0.0158309565348989
+==== CV Set 23 ====
+rel. error: 0.016622615011189987
+==== CV Set 24 ====
+rel. error: 0.016187192449026774
+==== CV Set 25 ====
+rel. error: 0.015292183271436551
+==== CV Set 26 ====
+rel. error: 0.01524101390180628
+==== CV Set 27 ====
+rel. error: 0.017667910742850432
+==== CV Set 28 ====
+rel. error: 0.018154284091262192
+==== CV Set 29 ====
+rel. error: 0.015411712655761904
+==== CV Set 30 ====
+rel. error: 0.015525381569015092
+==== CV Set 31 ====
+rel. error: 0.015557184142285695
+==== CV Set 32 ====
+rel. error: 0.018483951953939728
+==== CV Set 33 ====
+rel. error: 0.01578529031746906
+==== CV Set 34 ====
+rel. error: 0.017307568977712923
+==== CV Set 35 ====
+rel. error: 0.01544782258321648
+==== CV Set 36 ====
+rel. error: 0.016007249498513905
+==== CV Set 37 ====
+rel. error: 0.015171825551080712
+==== CV Set 38 ====
+rel. error: 0.015048424048163558
+==== CV Set 39 ====
+rel. error: 0.015456089447928043
+==== CV Set 40 ====
+rel. error: 0.016535563240438162
+==== CV Set 41 ====
+rel. error: 0.016055587304188292
+==== CV Set 42 ====
+rel. error: 0.01451151749510091
+==== CV Set 43 ====
+rel. error: 0.01591186591623045
+==== CV Set 44 ====
+rel. error: 0.015619785914142176
+==== CV Set 45 ====
+rel. error: 0.01742100556366482
+==== CV Set 46 ====
+rel. error: 0.015688378976016694
+==== CV Set 47 ====
+rel. error: 0.014905327437321108
+==== CV Set 48 ====
+rel. error: 0.015525599412838476
+==== CV Set 49 ====
+rel. error: 0.01722962385420695
+==== CV Set 50 ====
+rel. error: 0.01558902380073476
+==== CV Set 51 ====
+rel. error: 0.01655647911212023
+==== CV Set 52 ====
+rel. error: 0.01779532168377908
+==== CV Set 53 ====
+rel. error: 0.017190077794891245
+==== CV Set 54 ====
+rel. error: 0.014692667671539717
+==== CV Set 55 ====
+rel. error: 0.015611148723432295
+==== CV Set 56 ====
+rel. error: 0.015995003079250537
+==== CV Set 57 ====
+rel. error: 0.014846955836037533
+==== CV Set 58 ====
+rel. error: 0.014395879757721502
+==== CV Set 59 ====
+rel. error: 0.015934967074513244
+==== CV Set 60 ====
+rel. error: 0.01611012033814788
+==== CV Set 61 ====
+rel. error: 0.01546679967356265
+==== CV Set 62 ====
+rel. error: 0.016649297058213934
+==== CV Set 63 ====
+rel. error: 0.014795072797168343
+==== CV Set 64 ====
+rel. error: 0.018258411364417693
+==== CV Set 65 ====
+rel. error: 0.017637757667968473
+==== CV Set 66 ====
+rel. error: 0.01788257256749247
+==== CV Set 67 ====
+rel. error: 0.016977037944932948
+==== CV Set 68 ====
+rel. error: 0.01784256382897751
+==== CV Set 69 ====
+rel. error: 0.018290355169195967
+==== CV Set 70 ====
+rel. error: 0.01559237303587866
+==== CV Set 71 ====
+rel. error: 0.016970789305570406
+==== CV Set 72 ====
+rel. error: 0.018847350050030638
+==== CV Set 73 ====
+rel. error: 0.01447648944010515
+==== CV Set 74 ====
+rel. error: 0.016388294422792583
+==== CV Set 75 ====
+rel. error: 0.01665786745215593
+==== CV Set 76 ====
+rel. error: 0.014053495512498328
+==== CV Set 77 ====
+rel. error: 0.015356392979149315
+==== CV Set 78 ====
+rel. error: 0.017352362632633053
+==== CV Set 79 ====
+rel. error: 0.01626766610802804
+==== CV Set 80 ====
+rel. error: 0.017684140739778913
+==== CV Set 81 ====
+rel. error: 0.014046361933821312
+==== CV Set 82 ====
+rel. error: 0.016867232323123562
+==== CV Set 83 ====
+rel. error: 0.017447490040385278
+==== CV Set 84 ====
+rel. error: 0.015738722713852966
+==== CV Set 85 ====
+rel. error: 0.015324002994855385
+==== CV Set 86 ====
+rel. error: 0.016079010490489525
+==== CV Set 87 ====
+rel. error: 0.016396643379171454
+==== CV Set 88 ====
+rel. error: 0.015291291625563497
+==== CV Set 89 ====
+rel. error: 0.016998585197437036
+==== CV Set 90 ====
+rel. error: 0.01567075443423441
+==== CV Set 91 ====
+rel. error: 0.017760027855211497
+==== CV Set 92 ====
+rel. error: 0.016265992326427604
+==== CV Set 93 ====
+rel. error: 0.01715340065913657
+==== CV Set 94 ====
+rel. error: 0.016165121726580422
+==== CV Set 95 ====
+rel. error: 0.01444213549590539
+==== CV Set 96 ====
+rel. error: 0.01867037039431055
+==== CV Set 97 ====
+rel. error: 0.016871162585422785
+==== CV Set 98 ====
+rel. error: 0.015024169097046366
+==== CV Set 99 ====
+rel. error: 0.019026235073611588
+==== CV Set 100 ====
+rel. error: 0.015480505869064158
+======
+======
+======
+Median: 0.01606598971444983
+
+[0K[0K[32m[1mjulia> [0m[0m[7C[7C[?2004h[0K[32m[1mjulia> [0m[0m[7C[7C
+[?2004l[0m

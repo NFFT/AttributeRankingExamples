@@ -1,0 +1,246 @@
+startup file loaded
+               _
+   _       _ _(_)_     |  Documentation: https://docs.julialang.org
+  (_)     | (_) (_)    |
+   _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
+  | | | | | | |/ _` |  |
+  | | |_| | | | (_| |  |  Version 1.5.2 (2020-09-23)
+ _/ |\__'_|_|_|\__'_|  |  Official https://julialang.org/ release
+|__/                   |
+
+ERROR: Invalid history file (/HOME1/users/personal/mischmi/.julia/logs/repl_history.jl) format:
+If you have a history file left over from an older version of Julia,
+try renaming or deleting it.
+Invalid character: '\0' at line 34
+Stacktrace:
+ [1] error(::String, ::String, ::String, ::Int64) at ./error.jl:42
+ [2] hist_from_file(::Any, ::Any, ::Any) at /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.5/REPL/src/REPL.jl:526
+ [3] setup_interface(::REPL.LineEditREPL, ::Bool, ::Any) at /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.5/REPL/src/REPL.jl:962
+ [4] setup_interface(::REPL.LineEditREPL; hascolor::Bool, extra_repl_keymap::Any) at /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.5/REPL/src/REPL.jl:872
+ [5] setup_interface at /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.5/REPL/src/REPL.jl:872 [inlined]
+ [6] (::Pkg.var"#1#2")(::REPL.LineEditREPL) at /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.5/Pkg/src/Pkg.jl:540
+ [7] __atreplinit(::REPL.LineEditREPL) at ./client.jl:347
+ [8] #invokelatest#1 at ./essentials.jl:710 [inlined]
+ [9] invokelatest at ./essentials.jl:709 [inlined]
+ [10] _atreplinit at ./client.jl:354 [inlined]
+ [11] (::Base.var"#807#809"{Bool,Bool,Bool,Bool})(::Module) at ./client.jl:398
+ [12] #invokelatest#1 at ./essentials.jl:710 [inlined]
+ [13] invokelatest at ./essentials.jl:709 [inlined]
+ [14] run_main_repl(::Bool, ::Bool, ::Bool, ::Bool, ::Bool) at ./client.jl:383
+ [15] exec_options(::Base.JLOptions) at ./client.jl:313
+ [16] _start() at ./client.jl:506
+
+[?2004h[0K[32m[1mjulia> [0m[0m[7C[7C[0K[0K[32m[1mjulia> [0m[0m[7C[7C[0K[0K[32m[1mjulia> [0m[0m[7C[7C[0K[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_active_set_detection.jl")[45C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_active_set_detection.jl")[45C[0K[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_active_set_detection.jl")[45C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_active_set_detection.jl"[44C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_active_set_detection.jl[43C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_active_set_detection.j[42C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_active_set_detection.[41C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_active_set_detection[40C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_active_set_detectio[39C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_active_set_detecti[38C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_active_set_detect[37C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_active_set_detec[36C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_active_set_dete[35C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_active_set_det[34C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_active_set_de[33C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_active_set_d[32C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_active_set_[31C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_active_set[30C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_active_se[29C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_active_s[28C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_active_[27C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_active[26C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_activ[25C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_acti[24C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_act[23C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_ac[22C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_a[21C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_[20C[0K[32m[1mjulia> [0m[0m[7Cinclude("ail[19C[0K[32m[1mjulia> [0m[0m[7Cinclude("ai[18Cl_v[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_va[22Cl[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_validation.[31Cj[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_validation.jl"[34C)[0K[32m[1mjulia> [0m[0m[7Cinclude("ail_validation.jl")[35C
+[?2004l[0m==== Approximation Parameters ====
+|X_train| = 6874
+|X_test| = 6874
+lambda = 15.0
+==== CV Set 1 ====
+RMSE: 0.0456482423471061
+==== CV Set 2 ====
+RMSE: 0.045611392999052876
+==== CV Set 3 ====
+RMSE: 0.04598766686751603
+==== CV Set 4 ====
+RMSE: 0.04629638218864833
+==== CV Set 5 ====
+RMSE: 0.04476504361062539
+==== CV Set 6 ====
+RMSE: 0.04609842719775307
+==== CV Set 7 ====
+RMSE: 0.04530802432712181
+==== CV Set 8 ====
+RMSE: 0.0455669897846312
+==== CV Set 9 ====
+RMSE: 0.046116780570447435
+==== CV Set 10 ====
+RMSE: 0.04467286402784147
+==== CV Set 11 ====
+RMSE: 0.045182276390120825
+==== CV Set 12 ====
+RMSE: 0.04463607829506875
+==== CV Set 13 ====
+RMSE: 0.04502124324847429
+==== CV Set 14 ====
+RMSE: 0.04486455150854215
+==== CV Set 15 ====
+RMSE: 0.046123456434240255
+==== CV Set 16 ====
+RMSE: 0.04597492108925631
+==== CV Set 17 ====
+RMSE: 0.04580039483667397
+==== CV Set 18 ====
+RMSE: 0.04565524747661164
+==== CV Set 19 ====
+RMSE: 0.045836995026487165
+==== CV Set 20 ====
+RMSE: 0.046086894234780844
+==== CV Set 21 ====
+RMSE: 0.04493556906732896
+==== CV Set 22 ====
+RMSE: 0.04553183109298275
+==== CV Set 23 ====
+RMSE: 0.045885685414488016
+==== CV Set 24 ====
+RMSE: 0.04547672536861461
+==== CV Set 25 ====
+RMSE: 0.04556461797669147
+==== CV Set 26 ====
+RMSE: 0.04574284929436869
+==== CV Set 27 ====
+RMSE: 0.045820406386130205
+==== CV Set 28 ====
+RMSE: 0.04572999370889182
+==== CV Set 29 ====
+RMSE: 0.046554542064919824
+==== CV Set 30 ====
+RMSE: 0.04543645199428824
+==== CV Set 31 ====
+RMSE: 0.04553028239264877
+==== CV Set 32 ====
+RMSE: 0.04590518574583836
+==== CV Set 33 ====
+RMSE: 0.04594391558483288
+==== CV Set 34 ====
+RMSE: 0.04541201876377701
+==== CV Set 35 ====
+RMSE: 0.04574629880017932
+==== CV Set 36 ====
+RMSE: 0.04541467963359248
+==== CV Set 37 ====
+RMSE: 0.04616102889671875
+==== CV Set 38 ====
+RMSE: 0.04597772779105061
+==== CV Set 39 ====
+RMSE: 0.045603177609864515
+==== CV Set 40 ====
+RMSE: 0.04540314462142361
+==== CV Set 41 ====
+RMSE: 0.04630327715914762
+==== CV Set 42 ====
+RMSE: 0.04544753130643676
+==== CV Set 43 ====
+RMSE: 0.04528304048124722
+==== CV Set 44 ====
+RMSE: 0.04694887142648208
+==== CV Set 45 ====
+RMSE: 0.045833552661416165
+==== CV Set 46 ====
+RMSE: 0.04651802845307588
+==== CV Set 47 ====
+RMSE: 0.047274391358217566
+==== CV Set 48 ====
+RMSE: 0.04580724985627468
+==== CV Set 49 ====
+RMSE: 0.045412538495947
+==== CV Set 50 ====
+RMSE: 0.04625179929125168
+==== CV Set 51 ====
+RMSE: 0.045681874482000104
+==== CV Set 52 ====
+RMSE: 0.04591787274719768
+==== CV Set 53 ====
+RMSE: 0.04516035771309393
+==== CV Set 54 ====
+RMSE: 0.045365720480151084
+==== CV Set 55 ====
+RMSE: 0.04630793295714973
+==== CV Set 56 ====
+RMSE: 0.045535340376118685
+==== CV Set 57 ====
+RMSE: 0.045597573541107474
+==== CV Set 58 ====
+RMSE: 0.045612116381365815
+==== CV Set 59 ====
+RMSE: 0.044880975759494846
+==== CV Set 60 ====
+RMSE: 0.04521283537388807
+==== CV Set 61 ====
+RMSE: 0.04524782565227427
+==== CV Set 62 ====
+RMSE: 0.04618610773836793
+==== CV Set 63 ====
+RMSE: 0.04695489978914176
+==== CV Set 64 ====
+RMSE: 0.04577584749717881
+==== CV Set 65 ====
+RMSE: 0.04571743242028517
+==== CV Set 66 ====
+RMSE: 0.04558666092571998
+==== CV Set 67 ====
+RMSE: 0.046246407256931535
+==== CV Set 68 ====
+RMSE: 0.044782672851436105
+==== CV Set 69 ====
+RMSE: 0.046610648401569345
+==== CV Set 70 ====
+RMSE: 0.046083191857148306
+==== CV Set 71 ====
+RMSE: 0.04585125568981701
+==== CV Set 72 ====
+RMSE: 0.046813156937012004
+==== CV Set 73 ====
+RMSE: 0.04568992329887132
+==== CV Set 74 ====
+RMSE: 0.04551020702498395
+==== CV Set 75 ====
+RMSE: 0.04578013655681067
+==== CV Set 76 ====
+RMSE: 0.045615296793055156
+==== CV Set 77 ====
+RMSE: 0.04570515741525237
+==== CV Set 78 ====
+RMSE: 0.044938991154942015
+==== CV Set 79 ====
+RMSE: 0.04592692795854641
+==== CV Set 80 ====
+RMSE: 0.04493071714355722
+==== CV Set 81 ====
+RMSE: 0.04481662546452989
+==== CV Set 82 ====
+RMSE: 0.045118191836770634
+==== CV Set 83 ====
+RMSE: 0.045460556404400165
+==== CV Set 84 ====
+RMSE: 0.04550659725290842
+==== CV Set 85 ====
+RMSE: 0.045468271685038426
+==== CV Set 86 ====
+RMSE: 0.04607163168807282
+==== CV Set 87 ====
+RMSE: 0.04559037821850834
+==== CV Set 88 ====
+RMSE: 0.0445041426209674
+==== CV Set 89 ====
+RMSE: 0.04507083399458181
+==== CV Set 90 ====
+RMSE: 0.04652530743854231
+==== CV Set 91 ====
+RMSE: 0.045866809072544285
+==== CV Set 92 ====
+RMSE: 0.04559481995147988
+==== CV Set 93 ====
+RMSE: 0.0459321069440541
+==== CV Set 94 ====
+RMSE: 0.04617851067256623
+==== CV Set 95 ====
+RMSE: 0.04462777423558023
+==== CV Set 96 ====
+RMSE: 0.046296880340177274
+==== CV Set 97 ====
+RMSE: 0.0460305064411882
+==== CV Set 98 ====
+RMSE: 0.04638850046164537
+==== CV Set 99 ====
+RMSE: 0.04630239773070318
+==== CV Set 100 ====
+RMSE: 0.045580215714409095
+======
+======
+======
+Median: 0.045685898890435714
+
+[0K[0K[32m[1mjulia> [0m[0m[7C[7C[?2004h[0K[32m[1mjulia> [0m[0m[7C[7C[0K[32m[1mjulia> [0m[0m[7C[7C^C
+
+[0K[32m[1mjulia> [0m[0m[7C[7C
+[?2004l[0m
