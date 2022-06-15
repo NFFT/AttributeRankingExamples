@@ -19,17 +19,17 @@ println( "lambda = ", lambda )
 
 v = LibTest.testBandwidths2d( ex, 14, lambda )
 
-f = ANOVAapprox.nperiodic_approx( ex.X_train, ex.y_train, 2, v[1] )
+f = ANOVAapprox.approx( ex.X_train, ex.y_train, 2, v[1], "cos")
 ANOVAapprox.approximate( f, max_iter=200, lambda=[v[2],] )
-println( "min RMSE: ", sqrt(ANOVAapprox.get_MSE(f, ex.X_test, ex.y_test, v[2])) )
+println( "min RMSE: ", sqrt(ANOVAapprox.get_mse(f, ex.X_test, ex.y_test, v[2])) )
 println( "cor. BW: ", v[1] )
 
 gsis = ANOVAapprox.get_GSI( f, v[2] )
 
 println( "GSIs:" )
 
-for i = 1:length(f.U)
-    println( f.U[i], ": ", gsis[i] )
+for i = 2:length(f.U)
+    println( f.U[i], ": ", gsis[i-1] )
 end
 
 println("==========")
@@ -42,9 +42,9 @@ AS = 0
 for eps in 0.005:0.005:0.025
 
     activeSet = copy(ANOVAapprox.get_ActiveSet( f, [eps, eps] )[v[2]])
-    f_eps = ANOVAapprox.nperiodic_approx( ex.X_train, ex.y_train, 2, v[1], active_set=activeSet )
+    f_eps = ANOVAapprox.approx( ex.X_train, ex.y_train, activeSet, v[1], "cos")
     ANOVAapprox.approximate( f_eps, max_iter=200, lambda=lambda )
-    m = findmin( ANOVAapprox.get_MSE(f_eps, ex.X_test, ex.y_test) )
+    m = findmin( ANOVAapprox.get_mse(f_eps, ex.X_test, ex.y_test) )
 
     if sqrt(m[1]) < rmse
         global AS = copy(activeSet)

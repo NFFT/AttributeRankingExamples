@@ -49,7 +49,7 @@ end
 for i = 1:cv_n_times
     println( "==== CV Set ", i ," ====" )
     cex = LibTest.example( X_scaled, complex(y_scaled), 0.2 )
-    res = ANOVAapprox.testBandwidths( cex.X_train, cex.y_train, cex.X_test, cex.y_test, 2, bws; lambda=lambda, max_iter=200, active_set=AS )
+    res = LibTest.testBandwidths( cex.X_train, cex.y_train, cex.X_test, cex.y_test, 2, bws; lambda=lambda, max_iter=200, active_set=AS )
     for ( k, v ) in res
         rmses[k[1]] += sqrt(v)/cv_n_times
         println( "bw: ", k[1], " lambda: ", k[2], " rmse: ", sqrt(v) )

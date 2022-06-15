@@ -60,34 +60,18 @@ f3_active_set[5] = [1,2]
 f3_active_set[6] = [1,3]
 f3_active_set[7] = [2,3]
 
-function setSize( U, N )
-    freq = 0
+function generateData( friedman_number, number_samples )
 
-    for u in U 
-        if u != [] 
-            freq += (N[length(u)]-1)^(length(u))
-        end
-    end
-
-    return freq+1
-end
-
-function generateData( friedman_number, number_samples; rs=false )
-
-    Random.seed!()
-
-    if rs != false 
-        Random.seed!(rs)
-    end
+    rng = MersenneTwister( rand(1000:9999) )
 
     f = [ friedman1, friedman2, friedman3 ]
     d = [ 10, 4, 4 ]
     noise_variance = [ 1.0, 125.0, 0.1 ]
 
     dist = Normal( 0.0, noise_variance[friedman_number] )
-    noise = rand( dist, number_samples )
+    noise = rand( rng, dist, number_samples )
 
-    X = rand( d[friedman_number], number_samples )
+    X = rand( rng, d[friedman_number], number_samples )
     y = [ f[friedman_number](X[:,i]) for i = 1:number_samples ]
 
     return (X, y, noise)

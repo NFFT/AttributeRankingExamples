@@ -22,9 +22,9 @@ println( "|X_train| = ", size(ex.X_train, 2) )
 println( "|X_test| = ", size(ex.X_test, 2) )
 println( "lambda = ", lambda )
 
-f = ANOVAapprox.nperiodic_approx( ex.X_train, ex.y_train, 2, [12,2] )
+f = ANOVAapprox.approx( ex.X_train, ex.y_train, 2, [12,2], "cos")
 ANOVAapprox.approximate( f, max_iter=200, lambda=lambda )
-res = findmin(ANOVAapprox.get_MSE(f, ex.X_test, ex.y_test))
+res = findmin(ANOVAapprox.get_mse(f, ex.X_test, ex.y_test))
 
 println( "min RMSE: ", sqrt(res[1]) )
 println( "cor. BW: ", [12,2], " lambda: ", res[2] )
@@ -33,8 +33,8 @@ gsis = ANOVAapprox.get_GSI( f, res[2] )
 
 println( "GSIs:" )
 
-for i = 1:length(f.U)
-    println( f.U[i], ": ", gsis[i] )
+for i = 2:length(f.U)
+    println( f.U[i], ": ", gsis[i-1] )
 end
 
 println("==========")
@@ -47,9 +47,9 @@ AS = 0
 for eps in 0.001:0.001:0.01
 
     activeSet = copy(ANOVAapprox.get_ActiveSet( f, [eps, eps] )[res[2]])
-    f_eps = ANOVAapprox.nperiodic_approx( ex.X_train, ex.y_train, 2, [12,2], active_set=activeSet )
+    f_eps = ANOVAapprox.approx( ex.X_train, ex.y_train, activeSet, [12,2], "cos")
     ANOVAapprox.approximate( f_eps, max_iter=200, lambda=lambda )
-    m = findmin( ANOVAapprox.get_MSE(f_eps, ex.X_test, ex.y_test) )
+    m = findmin( ANOVAapprox.get_mse(f_eps, ex.X_test, ex.y_test) )
 
     if sqrt(m[1]) < rmse
         global AS = copy(activeSet)

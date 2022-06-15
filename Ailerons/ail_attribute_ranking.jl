@@ -24,7 +24,7 @@ bw = [ 14, 2 ]
 lambda = 15.0
 
 ex = LibTest.example( X_scaled, complex(y_scaled), 0.5 )
-f = ANOVAapprox.nperiodic_approx( ex.X_train, ex.y_train, 2, bw, active_set=AS )
+f = ANOVAapprox.approx( ex.X_train, ex.y_train, AS, bw, "cos")
 ANOVAapprox.approximate( f, max_iter=200, lambda=[lambda,] )
 println( "RMSE: ", sqrt(ANOVAapprox.get_MSE(f, ex.X_test, ex.y_test, lambda)) )
 println( "Attribute Ranking: " )

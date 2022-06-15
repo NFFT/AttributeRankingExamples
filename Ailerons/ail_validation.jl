@@ -37,7 +37,7 @@ rmses = zeros(cv_n_times)
 for i = 1:cv_n_times
     println( "==== CV Set ", i ," ====" )
     cex = LibTest.example( X_scaled, complex(y_scaled), 0.5 )
-    f = ANOVAapprox.nperiodic_approx( cex.X_train, cex.y_train, 2, bw, active_set=AS )
+    f = ANOVAapprox.approx( cex.X_train, cex.y_train, AS, bw, "cos")
     ANOVAapprox.approximate( f, max_iter=200, lambda=[lambda,] )
     rmses[i] = sqrt(ANOVAapprox.get_MSE(f, cex.X_test, cex.y_test, lambda))
     println( "RMSE: ", rmses[i] )

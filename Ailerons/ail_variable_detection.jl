@@ -6,6 +6,7 @@ using JLD2
 using FileIO
 using Random
 using Statistics
+using Distributed 
 using LibTest
 
 cv_n_times = 100
@@ -34,7 +35,7 @@ ar_mean = zeros( 40 )
 for i = 1:cv_n_times
     println( "==== CV Set ", i ," ====" )
     cex = LibTest.example( X_scaled, complex(y_scaled), 0.5 )
-    f = ANOVAapprox.nperiodic_approx( cex.X_train, cex.y_train, 1, [20,] )
+    f = ANOVAapprox.approx( cex.X_train, cex.y_train, 1, [20,], "cos")
     ANOVAapprox.approximate( f, max_iter=200, lambda=[10.0,] )
     r = ANOVAapprox.get_AttributeRanking( f, 10.0 ) ./ cv_n_times
     global ar_mean += r
@@ -52,9 +53,9 @@ for v = 10:24
     for i = 1:20 
         println( "==== CV Set ", i ," ====" )
         cex = LibTest.example( X_scaled[:,act_vars], complex(y_scaled), 0.5 )
-        f = ANOVAapprox.nperiodic_approx( cex.X_train, cex.y_train, 1, [20,] )
+        f = ANOVAapprox.approx( cex.X_train, cex.y_train, 1, [20,], "cos")
         ANOVAapprox.approximate( f, max_iter=200, lambda=[10.0,] )
-        vars_rmses[v-9] += sqrt(ANOVAapprox.get_MSE(f, cex.X_test, cex.y_test, 10.0))/20
+        vars_rmses[v-9] += sqrt(ANOVAapprox.get_mse(f, cex.X_test, cex.y_test, 10.0))/20
     end
 end
 
