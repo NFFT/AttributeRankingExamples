@@ -6,6 +6,16 @@ using DataFrames
 using ANOVAapprox
 using LinearAlgebra
 using Random
+using Plots
+
+function plotGSIS(f, lambda)
+  gsis = ANOVAapprox.get_GSI(f, lambda)
+  label = string.(f.U[2:end])
+  label = replace.(label, "[" => "{")
+  label = replace.(label, "]" => "}")
+  l = length(label)
+  Plots.plot(gsis, markershape=:utriangle, st=:sticks, xticks = (1:l, label), legend = false)
+end
 
 function getN1fromN2( N2 )
     return (N2 - 1)*(N2 - 1) + 1
