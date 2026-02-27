@@ -78,6 +78,7 @@ for idx in range(it):
         
     with open('plots/plotdata/s2_cv_it'+str(idx+1)+'.csv', 'w') as csvfile:
         csvwrite = csv.writer(csvfile, delimiter=',')
+        csvwrite.writerow(["B", "cv", "L2error"]) 
         for idx_cv in range(len(Bs)):
             csvwrite.writerow([Bs[idx_cv], cv[idx_cv], L2error[idx_cv]]) 
             
