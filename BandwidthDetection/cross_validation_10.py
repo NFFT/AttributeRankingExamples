@@ -27,8 +27,7 @@ print("sigma =",str(np.sqrt(np.linalg.norm(f-y)**2/len(f))))
 
 with open('plots/plotdata/s10_cv_sigma.csv', 'w') as csvfile:
     csvwrite = csv.writer(csvfile, delimiter=',')
-    for idx_cv in range(len(Bs)):
-        csvwrite.writerow([np.sqrt(np.linalg.norm(f-y)**2/len(f))]) 
+    csvwrite.writerow([np.sqrt(np.linalg.norm(f-y)**2/len(f))]) 
 
 X_test = rng.random((M_test, d))
 y_test = np.array([TestFunction(X_test[i, :].T) for i in range(M_test)], dtype=complex) 
