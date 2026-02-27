@@ -1,5 +1,6 @@
 import numpy as np
 import pyANOVAapprox as ANOVAapprox
+import csv
 
 from itertools import combinations
 
@@ -68,7 +69,12 @@ for idx in range(it):
         L2error[idx_cv] = np.sqrt(ads.get_mse(X=X_test,y=y_test,lam=0.0))
         
         print(Bs[idx_cv], cv[idx_cv], L2error[idx_cv])
-        
+    
+    with open('plots/plotdata/s5_cv_it'+str(idx)+'.csv', 'w') as csvfile:
+        csvwrite = csv.writer(csvfile, delimiter=',')
+        for idx_cv in range(len(Bs)):
+            csvwrite.writerow([Bs[idx_cv], cv[idx_cv], L2error[idx_cv]]) 
+    
     B = Bs[np.argmin(cv)]
     bw = ANOVAapprox.compute_bandwidth(B, D, t)
     ads.addSetting(setting)

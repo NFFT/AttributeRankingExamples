@@ -1,5 +1,6 @@
 import numpy as np
 import pyANOVAapprox as ANOVAapprox
+import csv
 
 from itertools import combinations
 
@@ -70,6 +71,11 @@ for idx in range(it):
         
         print(Bs[idx_cv], cv[idx_cv], L2error[idx_cv])
         
+    with open('plots/plotdata/s3_cv_it'+str(idx)+'.csv', 'w') as csvfile:
+        csvwrite = csv.writer(csvfile, delimiter=',')
+        for idx_cv in range(len(Bs)):
+            csvwrite.writerow([Bs[idx_cv], cv[idx_cv], L2error[idx_cv]]) 
+            
     B = Bs[np.argmin(cv)]
     bw = ANOVAapprox.compute_bandwidth(B, D, t)
     ads.addSetting(setting)
