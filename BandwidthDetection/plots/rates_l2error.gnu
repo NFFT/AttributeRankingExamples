@@ -17,10 +17,10 @@ set logscale y
 set xlabel 'iteration'
 set ylabel '$L_2$ error'
 
-set ytics  1e-3 nologscale
-set yrange [1e-7:1e-12]
-set output "img/s3_rates_l2error.tex"
-plot "plotdata/s3_rates_l2error.csv" using 1:2 with linespoints ls 1
+set ytics  10 logscale
+set yrange [1e-11:1e-7]
+set output "img/s2_rates_l2error.tex"
+plot "plotdata/s2_rates_l2error.csv" using 1:2 with linespoints ls 1
 
 #set grid mytics lt 1 lw 3 lc 'gray'
 #set format y '\scriptsize $10^{%L}$'
