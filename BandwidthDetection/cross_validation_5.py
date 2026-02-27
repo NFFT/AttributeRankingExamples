@@ -70,7 +70,7 @@ for idx in range(it):
         
         print(Bs[idx_cv], cv[idx_cv], L2error[idx_cv])
     
-    with open('plots/plotdata/s5_cv_it'+str(idx)+'.csv', 'w') as csvfile:
+    with open('plots/plotdata/s5_cv_it'+str(idx+1)+'.csv', 'w') as csvfile:
         csvwrite = csv.writer(csvfile, delimiter=',')
         for idx_cv in range(len(Bs)):
             csvwrite.writerow([Bs[idx_cv], cv[idx_cv], L2error[idx_cv]]) 

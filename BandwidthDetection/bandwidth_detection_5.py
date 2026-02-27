@@ -44,9 +44,9 @@ for i in range(it):
 with open('plots/plotdata/s5_rates_l2error.csv', 'w') as csvfile:
     csvwrite = csv.writer(csvfile, delimiter=',')
     for i in range(it):
-        csvwrite.writerow([i,ads.get_mse(lam=0.0,settingnr=i,X=X_test,y=y_test)])
+        csvwrite.writerow([i+1,ads.get_mse(lam=0.0,settingnr=i,X=X_test,y=y_test)])
         
 for i in range(it):
-    with open('plots/plotdata/s5_rates_bw_it'+str(i)+'.csv', 'w') as csvfile:
+    with open('plots/plotdata/s5_rates_bw_it'+str(i+1)+'.csv', 'w') as csvfile:
         csvwrite = csv.writer(csvfile, delimiter=',')
         csvwrite.writerow([{ads.getSetting(i).U[j]:ads.getSetting(i).N[j] for j in range(len(ads.getSetting(1).U))}])
